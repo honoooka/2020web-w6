@@ -18,12 +18,22 @@
       text-align: center;
       line-height: 100px;
     }
-    .win {
+    .daikiti {
       background: pink;
       border-radius: 50%;
       transform: rotate(360deg);
     }
-    .lose {
+    .tyuukiti {
+      background: yellow;
+      border-radius: 50%;
+      transform: rotate(360deg);
+    }
+    .shoukiti {
+      background: blue;
+      border-radius: 50%;
+      transform: rotate(360deg);
+    }
+    .kyou {
       transform: scale(0.9);
     }
   </style>
@@ -34,19 +44,25 @@
     'use strict';
 
     const num = 15;
-    const winner = Math.floor(Math.random() * num); // 0 - 4
+    const omikuzi = Math.floor(Math.random() * num); 
 
     for (let i = 0; i < num; i++) {
       const div = document.createElement('div');
       div.classList.add('box');
       
       div.addEventListener('click', () => {
-        if (i === winner) {
+        if (i === 1) {
           div.textContent = '大吉';
-          div.classList.add('win');
-        } else {
-          div.textContent = 'Lose!';
-          div.classList.add('lose');
+          div.classList.add('daikiti');
+        } else if (i === 3 || i===5 || i===7){
+          div.textContent = '中吉';
+          div.classList.add('tyuukiti');
+        }else if((i%2)==0){
+          div.textContent = '小吉';
+          div.classList.add('shoukiti');
+        }else{
+          div.textContent = '凶';
+          div.classList.add('kyou');
         }
       });
 
