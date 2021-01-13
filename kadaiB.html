@@ -47,7 +47,7 @@
     'use strict';
 
     const num = 15;
-    const omikuzi = Math.floor(Math.random() * 100); 
+    const omikuzi = Math.floor(Math.random() * num); 
 //     const tyuukiti1 = Math.floor(Math.random() * num); 
 //     const tyuukiti2 = Math.floor(Math.random() * num); 
 //     const syoukiti1 = Math.floor(Math.random() * num); 
@@ -60,15 +60,15 @@
       div.classList.add('box');
       
       div.addEventListener('click', () => {
-        if (omikuzi <= 10) {
+        if (omikuzi === 1) {
           div.textContent = '大吉';
           div.classList.add('daikiti');
-        } else if (10<omikuzi<=30){
-          div.textContent = '中吉';
-          div.classList.add('tyuukiti');
-        }else if(40<omikuzi<=75){
-          div.textContent = '小吉';
-          div.classList.add('syoukiti');
+//         } else if (10<omikuzi<=30){
+//           div.textContent = '中吉';
+//           div.classList.add('tyuukiti');
+//         }else if(40<omikuzi<=75){
+//           div.textContent = '小吉';
+//           div.classList.add('syoukiti');
         }else{
           div.textContent = '凶';
           div.classList.add('kyou');
