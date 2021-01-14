@@ -47,10 +47,12 @@
     'use strict';
 
     const num = 10;
-    const syoukiti = Math.floor(Math.random() * num);
-    const tyuukiti = Math.floor(Math.random() * num); 
-    const daikiti = Math.floor(Math.random() * num); 
+    const syoukiti1 = Math.floor(Math.random() * num);
     const syoukiti2 = Math.floor(Math.random() * num);
+    const syoukiti3 = Math.floor(Math.random() * num);
+    const tyuukiti1 = Math.floor(Math.random() * num); 
+    const tyuukiti2 = Math.floor(Math.random() * num); 
+    const daikiti = Math.floor(Math.random() * num); 
 
 
     for (let i = 0; i < num; i++) {
@@ -58,10 +60,10 @@
       div.classList.add('box');
       
       div.addEventListener('click', () => {
-        if (syoukiti === i || syoukiti2 === i) {
+        if (syoukiti1 === i || syoukiti2 === i || syoukiti3 === i) {
           div.textContent = '小吉';
           div.classList.add('syoukiti');
-        } else if (tyuukiti === i){
+        } else if (tyuukiti === i || tyuukiti2 === i){
           div.textContent = '中吉';
           div.classList.add('tyuukiti');
         }else if(daikiti === i){
