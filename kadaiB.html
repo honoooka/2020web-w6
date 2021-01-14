@@ -49,7 +49,7 @@
     const num = 10;
     const syoukiti1 = Math.floor(Math.random() * num);
     const syoukiti2 = Math.floor(Math.random() * num);
-    //const syoukiti3 = Math.floor(Math.random() * num);
+    const syoukiti3 = Math.floor(Math.random() * num);
     const tyuukiti1 = Math.floor(Math.random() * num); 
     const tyuukiti2 = Math.floor(Math.random() * num); 
     const daikiti = Math.floor(Math.random() * num); 
@@ -60,7 +60,7 @@
       div.classList.add('box');
       
       div.addEventListener('click', () => {
-        if (syoukiti1 === i || syoukiti2 === i ) {
+        if (syoukiti1 === i || syoukiti2 === i || syoukiti3 === i) {
           div.textContent = '小吉';
           div.classList.add('syoukiti');
         } else if (tyuukiti1 === i || tyuukiti2 === i){
