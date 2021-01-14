@@ -29,7 +29,7 @@
       transform: rotate(360deg);
     }
     .syoukiti {
-      background: blue;
+      background: red;
       border-radius: 50%;
       transform: rotate(360deg);
     }
@@ -50,6 +50,7 @@
     const daikiti = Math.floor(Math.random() * num); 
     const tyuukiti = Math.floor(Math.random() * num); 
     const syoukiti = Math.floor(Math.random() * num);
+    const syoukiti = Math.floor(Math.random() * num);
 
 
     for (let i = 0; i < num; i++) {
@@ -57,15 +58,15 @@
       div.classList.add('box');
       
       div.addEventListener('click', () => {
-        if (daikiti === i) {
-          div.textContent = '大吉';
-          div.classList.add('daikiti');
+        if (syoukiti === i) {
+          div.textContent = '小吉';
+          div.classList.add('syoukiti');
         } else if (tyuukiti === i){
           div.textContent = '中吉';
           div.classList.add('tyuukiti');
-        }else if(syoukiti === i){
-          div.textContent = '小吉';
-          div.classList.add('syoukiti');
+        }else if(daikiti === i){
+          div.textContent = '大吉';
+          div.classList.add('daikiti');
         }else{
           div.textContent = '凶';
           div.classList.add('kyou');
