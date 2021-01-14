@@ -49,7 +49,7 @@
     const num = 10;
     const daikiti = Math.floor(Math.random() * num); 
     const tyuukiti = Math.floor(Math.random() * num); 
-    const shoukiti = Math.floor(Math.random() * num);
+    const syoukiti = Math.floor(Math.random() * num);
 
 
     for (let i = 0; i < num; i++) {
@@ -63,9 +63,9 @@
         } else if (tyuukiti === i){
           div.textContent = '中吉';
           div.classList.add('tyuukiti');
-//         }else if(syoukiti === i){
-//           div.textContent = '小吉';
-//           div.classList.add('syoukiti');
+        }else if(syoukiti === i){
+          div.textContent = '小吉';
+          div.classList.add('syoukiti');
         }else{
           div.textContent = '凶';
           div.classList.add('kyou');
